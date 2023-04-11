@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/font/Korner/korner.css">
+    <link rel="stylesheet" href="./assets/font/Korner/glitch.css">
+    <link rel="stylesheet" href="./assets/font/interr/inter.css">
+    <link rel="stylesheet" href="./assets/font/SDDEMO/sddemo.css">
+    <title>Contact</title>
+</head>
+<header>
+    <!-- Nav Starts -->
+    <div class="navbar">
+     <a href="./index.html" class="brand-title"><img src="./assets/icons/1.png" alt="" class="logo-image"></a>
+ 
+     <a href="#" class="toggle-button" onclick="openNav()">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+     </a>
+ </div>
+ 
+ <div id="myNav" class="overlay">
+     <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <!-- overlay -->
+     <div class="overlay-content">
+             <div>
+                 <a class="active" href="#">HOME</a>
+                 <a href="./blog.html">BLOG</a>
+                 <a href="./about.html">ABOUT</a>
+                 <a href="./resume.html">RESUME</a>
+                 <a href="./contact.html">CONTACT</a>
+             </div>
+     </div>
+ </div>
+ <!-- Nav Ends -->
+ </header>
+<body>
+    <section class="contact-form">
+        <div class="row">
+            <!--  -->
+            <div class="col-lg-6">
+                <div class="mynav">
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./work.html">PROJECTS</a></li>
+                        <li><a href="./blog.html">BLOGS</a></li>
+                        <!-- <li><a href="./resume.html">RESUME</a></li> -->
+                        <li><a href="./gallery.html">GALLERY</a></li>
+                        <li><a class="active" href="./contact.html">CONTACT</a></li>
+                    </ul>
+                </div>
+              
+             </div>
+             <!--  -->
+            <div class="col-lg-6">
+                    <form action="https://formspree.io/f/xzbqjoav" method="POST">
+                      <input type="text" id="fname" name="firstname" placeholder="Name">
+                  
+                      <input type="text" id="lname" name="lastname" placeholder="Email Address">
+        
+                      <input type="text" id="lname" name="lastname" placeholder="Subject">
+                        
+                      <textarea id="subject" name="subject" placeholder="Message"></textarea>
+
+
+                    </form>
+                    <div class="btn3-div">
+                        <button class="btn3"><span>Submit</span></button>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer-section">
+        <div>
+            <p class="brand-title"><img src="./assets/icons/1.png" alt="" class="logo-image"></p>
+            <p>Copyright ©2023 All rights reserved | Simba Blessed Inc.</p>
+            <div class="footer-icons">
+                <img src="./assets/icons/blue/Vector.png" alt="" class="icon1">
+                <img src="./assets/icons/blue/square-github 1.png" alt="" class="icon1">
+                <img src="./assets/icons/blue/instagram 1.png" alt="" class="icon1">
+                <img src="./assets/icons/blue/linkedin 1.png" alt="" class="icon1">
+            </div>
+        </div>
+    </section>
+    <script src="./assets/js/jquery-3.6.3.js"></script>
+    <script src="./assets/js/mine.js"></script>
+</body>
+</html>

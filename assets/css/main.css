@@ -1,0 +1,827 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap");
+* {
+  font-family: "interregular";
+}
+
+.div-gaps {
+  padding: 50px 0;
+}
+
+.sections-gaps {
+  padding: 70px 0;
+}
+
+.cards-gap {
+  padding: 30px 0;
+}
+
+.logo-image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 25%;
+}
+
+header {
+  position: absolute;
+  /* The Overlay (background) */
+}
+header .navbar {
+  display: flex;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+header .navbar .brand-title {
+  color: rgb(255, 255, 255);
+  transform: translateY(35%);
+  position: absolute;
+  left: 1rem;
+}
+header .navbar .toggle-button {
+  position: absolute;
+  top: 1.75rem;
+  right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+header .navbar .toggle-button:hover {
+  transition: 0.5s;
+}
+header .navbar .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+header .navbar .navbar-links {
+  display: none;
+  width: 100%;
+}
+header .navbar .navbar-links.active {
+  display: flex;
+}
+header .navbar .navbar-links ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  padding: 10px;
+}
+header .navbar .navbar-links ul li {
+  list-style: none;
+  text-align: right;
+}
+header .navbar .navbar-links ul li:hover {
+  background-color: gray;
+}
+header .navbar .navbar-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+header .navbar .navbar-links ul li a.active {
+  color: aqua;
+}
+header .overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0, 0, 0); /* Black fallback color */
+  background-color: rgba(0, 0, 0, 0.963); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+  /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+}
+header .overlay .overlay-content {
+  position: relative;
+  top: 10%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+header .overlay .overlay-content a {
+  /* The navigation links inside the overlay */
+  padding: 8px;
+  text-decoration: none;
+  font-size: 70px;
+  font-weight: 900;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+header .overlay .overlay-content a:hover {
+  color: aquamarine;
+}
+header .overlay .overlay-content a.focus {
+  color: aquamarine;
+}
+header .overlay .closebtn {
+  position: absolute;
+  top: -10px;
+  right: 45px;
+  font-size: 60px;
+  color: rgb(141, 141, 141);
+  text-decoration: none;
+}
+@media screen and (max-height: 450px) {
+  header .overlay .overlay a {
+    font-size: 20px;
+  }
+  header .overlay .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.bilboard {
+  /* position: relative; */
+  background-color: #111;
+  color: white;
+  align-content: center;
+  height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bilboard .social-icons {
+  display: flex;
+  transform: translateY(80%);
+  flex-direction: column;
+  gap: 90px;
+}
+.bilboard .social-icons li {
+  transform: rotate(90deg);
+  list-style: none;
+}
+.bilboard .social-icons li a {
+  color: rgb(141, 141, 141);
+}
+.bilboard .social-icons li a:hover {
+  color: aqua;
+  text-decoration: none;
+  transition: 0.5s;
+  letter-spacing: 1px;
+}
+.bilboard .herotxt-grp {
+  display: flex;
+  /* transform: translateY(60%); */
+  justify-content: center;
+}
+.bilboard .herotxt-grp .hero-icons {
+  width: 40px;
+  display: flex;
+  gap: 16px;
+  color: aquamarine;
+}
+.bilboard .herotxt-grp span {
+  color: aquamarine;
+  letter-spacing: 5px;
+  font-family: "sdglitchdemoregular";
+}
+.bilboard .herotxt-grp p {
+  font-size: 30px;
+}
+.bilboard .herotxt-grp h1 {
+  font-size: 120px;
+  font-weight: 900;
+  font-family: "Poppins", sans-serif;
+}
+.bilboard .mynav {
+  /* transform: translateY(60%); */
+}
+.bilboard .mynav ul li {
+  list-style: none;
+}
+.bilboard .mynav ul li a {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
+  line-height: 60px;
+  letter-spacing: 10px;
+}
+.bilboard .mynav ul li a.active {
+  color: aquamarine;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+.bilboard .mynav ul li a:hover {
+  color: aquamarine;
+  transition: 0.4s;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+.bilboard .hero-img {
+  height: 671px;
+}
+.bilboard .hero-main {
+  display: flex;
+  justify-content: end;
+}
+
+.about-me {
+  background-color: #111;
+  padding: 100px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.about-me .items-alll {
+  display: flex;
+  align-items: end;
+}
+.about-me h2 {
+  font-size: 120px;
+  color: white;
+  position: absolute;
+  align-items: center;
+}
+.about-me p {
+  font-size: 30px;
+  color: white;
+}
+.about-me p span {
+  color: aquamarine;
+  font-family: "sdglitchdemoregular";
+}
+
+.about-me-skills {
+  background-color: #111;
+  padding: 100px;
+  /* height: 100vh; */
+  display: flex;
+  align-items: center;
+}
+.about-me-skills .mynav {
+  /* transform: translateY(25%); */
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.about-me-skills .mynav ul li {
+  list-style: none;
+}
+.about-me-skills .mynav ul li .btn3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 45px;
+  position: relative;
+  top: 20px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  background-color: transparent;
+  color: white;
+  border: 2px solid aquamarine;
+  border-radius: 15px;
+}
+.about-me-skills .mynav ul li .btn3:hover {
+  color: black;
+  font-weight: bolder;
+  background-color: #4BD6C5;
+}
+.about-me-skills .mynav ul li .btn3 span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.about-me-skills .mynav ul li a {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
+  line-height: 60px;
+  letter-spacing: 10px;
+  /* text-decoration: line-through; */
+}
+.about-me-skills .mynav ul li a.active {
+  color: aquamarine;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+.about-me-skills .mynav ul li a:hover {
+  color: rgb(142, 126, 27);
+  transition: 0.4s;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+.about-me-skills .brain-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-me-skills .my-aboutimg {
+  height: 400px;
+}
+.about-me-skills .items-alll {
+  display: flex;
+  align-items: end;
+}
+.about-me-skills h3 {
+  position: absolute;
+  color: white;
+  width: 45%;
+  font-size: 50px;
+}
+.about-me-skills p {
+  font-size: 20px;
+  color: white;
+  line-height: 30px;
+}
+.about-me-skills a {
+  color: #4BD6C5;
+  text-decoration: none;
+}
+
+.section-padding {
+  background-color: #111;
+  padding: 100px;
+}
+
+.resume, .resume-all {
+  background-color: #111;
+  /*  padding: 100px;
+      height: 100vh; */
+  /* display: flex; */
+  align-items: center;
+  width: auto;
+}
+.resume .card, .resume-all .card {
+  background-color: #3A3A3A;
+  color: white;
+  padding: 30px;
+  width: 95%;
+}
+.resume .card span, .resume-all .card span {
+  color: aquamarine;
+}
+.resume .items-alll, .resume-all .items-alll {
+  display: flex;
+  align-items: end;
+}
+.resume h2, .resume-all h2 {
+  font-size: 120px;
+  color: white;
+  position: absolute;
+  align-items: center;
+}
+.resume h3, .resume-all h3 {
+  font-size: 30px;
+  color: white;
+}
+.resume p, .resume-all p {
+  font-size: 30px;
+  color: white;
+}
+.resume p span, .resume-all p span {
+  color: aquamarine;
+  font-family: "sdglitchdemoregular";
+}
+
+.work-section {
+  background-color: #111;
+  padding: 100px;
+  align-items: center;
+}
+.work-section .btn3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 45px;
+  position: relative;
+  top: 80px;
+  font-weight: bolder;
+  background-color: transparent;
+  color: white;
+  border: 2px solid aquamarine;
+  border-radius: 15px;
+  left: 33px;
+}
+.work-section .btn3:hover {
+  color: black;
+  font-weight: bolder;
+  background-color: #4BD6C5;
+}
+.work-section .btn3 span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.work-section .first-grp {
+  margin-bottom: 30px;
+}
+.work-section .first-grp h4 {
+  color: white;
+  text-align: center;
+}
+.work-section .first-grp p {
+  color: white;
+  text-align: center;
+}
+.work-section .first-grp .imgs-1 {
+  width: 100%;
+  height: 100%;
+}
+.work-section .first-grp .imgs-1:hover {
+  background-color: aquamarine;
+}
+.work-section .projects-nav ul {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+}
+.work-section .projects-nav ul li a.active {
+  color: #4BD6C5;
+}
+.work-section .items-alll {
+  display: flex;
+  align-items: end;
+}
+.work-section li a {
+  color: grey;
+  list-style: none;
+  text-decoration: none;
+  font-size: 20px;
+}
+.work-section li a:hover {
+  color: #4BD6C5;
+}
+.work-section h2 {
+  font-size: 120px;
+  color: white;
+  position: absolute;
+  align-items: center;
+}
+.work-section h3 {
+  font-size: 50px;
+  color: white;
+}
+.work-section p {
+  font-size: 30px;
+  color: white;
+}
+.work-section p span {
+  color: aquamarine;
+  font-family: "sdglitchdemoregular";
+}
+.work-section .sections-gap button {
+  position: relative;
+  padding: 5px 17px 5px 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: none;
+}
+.work-section .gallery-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.work-section .genesis-content {
+  display: flex;
+  padding-top: 10px;
+  justify-content: space-between;
+}
+.work-section .genesis-content a {
+  list-style: none;
+  text-decoration: none;
+  color: gray;
+  letter-spacing: 5px;
+}
+.work-section .genesis-content a:hover {
+  color: rgb(142, 126, 27);
+  text-decoration: line-through;
+}
+.work-section .Luigis-content {
+  display: flex;
+  padding-top: 10px;
+  justify-content: center;
+}
+.work-section .Luigis-content a {
+  list-style: none;
+  text-decoration: none;
+  color: gray;
+  letter-spacing: 5px;
+}
+.work-section .Luigis-content a:hover {
+  color: rgb(142, 126, 27);
+  text-decoration: line-through;
+}
+.work-section .Luigis-content a.focus {
+  color: rgb(142, 126, 27);
+  text-decoration: line-through;
+}
+
+.blogs, .blog {
+  background-color: #111;
+  /*     padding: 100px;
+      height: 100vh; */
+  /* display: flex; */
+  align-items: center;
+  width: auto;
+}
+.blogs .card, .blog .card {
+  background-color: #3A3A3A;
+  color: white;
+  padding: 30px;
+  width: 95%;
+}
+.blogs .card span, .blog .card span {
+  color: aquamarine;
+  font-family: "sdglitchdemoregular";
+}
+.blogs .items-alll, .blog .items-alll {
+  display: flex;
+  align-items: end;
+}
+.blogs h2, .blog h2 {
+  font-size: 120px;
+  color: white;
+  position: absolute;
+  align-items: center;
+}
+.blogs h3, .blog h3 {
+  font-size: 30px;
+  color: white;
+}
+.blogs p, .blog p {
+  font-size: 30px;
+  color: white;
+}
+.blogs p span, .blog p span {
+  color: aquamarine;
+  font-family: "sdglitchdemoregular";
+}
+
+.contact-form {
+  background-color: #111;
+  padding: 120px;
+}
+.contact-form .mynav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.contact-form .mynav ul li {
+  list-style: none;
+}
+.contact-form .mynav ul li a {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
+  line-height: 60px;
+  letter-spacing: 10px;
+  /* text-decoration: line-through; */
+}
+.contact-form .mynav ul li a.active {
+  color: aquamarine;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+.contact-form .mynav ul li a:hover {
+  color: rgb(142, 126, 27);
+  transition: 0.4s;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+.contact-form .items-alll h3 li {
+  list-style: none;
+}
+.contact-form .items-alll h3 li a {
+  color: white;
+  text-decoration: none;
+}
+.contact-form .items-alll h3 li a:hover {
+  color: aquamarine;
+}
+.contact-form .div-gaps {
+  margin-bottom: 5px;
+}
+.contact-form input[type=text], .contact-form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 10px 0;
+  font-size: larger;
+  display: inline-block;
+  border: none;
+  background-color: #3A3A3A;
+  color: white;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.contact-form textarea {
+  border: none;
+  background-color: #3A3A3A;
+  color: white;
+  font-size: larger;
+  border-radius: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 8px 0;
+  width: 100%;
+  height: 150px;
+}
+.contact-form .btn3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 45px;
+  position: relative;
+  top: 20px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  background-color: transparent;
+  color: white;
+  border: 2px solid aquamarine;
+  border-radius: 15px;
+}
+.contact-form .btn3:hover {
+  color: black;
+  font-weight: bolder;
+  background-color: #4BD6C5;
+}
+.contact-form .btn3 span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.footer-section {
+  background-color: #252525;
+  text-align: center;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 50px;
+}
+.footer-section .brand-title {
+  font-family: "korner_deli_nfregular";
+  font-size: 30px;
+}
+.footer-section p {
+  color: white;
+}
+.footer-section .footer-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.footer-section .footer-icons .icon1 {
+  width: 30px;
+}
+
+.services-section {
+  padding: 120px;
+  background-color: #111;
+}
+.services-section .card {
+  background-color: #3A3A3A;
+  color: white;
+  text-align: center;
+  border: none;
+}
+.services-section .card h4 {
+  font-weight: 900;
+  color: #4BD6C5;
+}
+.services-section .card-header {
+  border: none;
+}
+.services-section .card-header .brushimg {
+  width: 90px;
+}
+
+.gallery-section {
+  background-color: #111;
+  padding: 120px;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+}
+.gallery-section .gomb_set {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.gallery-section .mynav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.gallery-section .mynav ul li {
+  list-style: none;
+}
+.gallery-section .mynav ul li a {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
+  line-height: 60px;
+  letter-spacing: 10px;
+  /* text-decoration: line-through; */
+}
+.gallery-section .mynav ul li a.active {
+  color: aquamarine;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+.gallery-section .mynav ul li a:hover {
+  color: rgb(142, 126, 27);
+  transition: 0.4s;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+
+.work-section {
+  background-color: #111;
+  width: 100vw;
+  height: 100vh;
+}
+.work-section .mynav {
+  transform: translateY(25%);
+}
+.work-section .mynav ul li {
+  list-style: none;
+}
+.work-section .mynav ul li .btn3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 45px;
+  position: relative;
+  top: 20px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  background-color: transparent;
+  color: white;
+  border: 2px solid aquamarine;
+  border-radius: 15px;
+}
+.work-section .mynav ul li .btn3:hover {
+  color: black;
+  font-weight: bolder;
+  background-color: #4BD6C5;
+}
+.work-section .mynav ul li .btn3 span {
+  font-size: 20px;
+  font-weight: 700;
+}
+.work-section .mynav ul li a {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
+  line-height: 60px;
+  letter-spacing: 10px;
+  /* text-decoration: line-through; */
+}
+.work-section .mynav ul li a.active {
+  color: aquamarine;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+.work-section .mynav ul li a:hover {
+  color: rgb(142, 126, 27);
+  transition: 0.4s;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+
+.bilboard-blog {
+  background-color: #111;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px;
+}
+.bilboard-blog .mynav {
+  display: flex;
+  height: 100%;
+  transform: translateY(40%);
+}
+.bilboard-blog .mynav ul li {
+  list-style: none;
+}
+.bilboard-blog .mynav ul li a {
+  text-decoration: none;
+  color: rgb(141, 141, 141);
+  line-height: 60px;
+  letter-spacing: 10px;
+}
+.bilboard-blog .mynav ul li a.active {
+  color: aquamarine;
+  font-size: 35px;
+  letter-spacing: 0px;
+}
+.bilboard-blog .mynav ul li a:hover {
+  color: aquamarine;
+  transition: 0.4s;
+  font-size: 35px;
+  letter-spacing: 0px;
+}/*# sourceMappingURL=main.css.map */
