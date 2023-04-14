@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/font/Korner/korner.css">
@@ -33,7 +35,6 @@
                  <a class="active" href="#">HOME</a>
                  <a href="./blog.html">BLOG</a>
                  <a href="./about.html">ABOUT</a>
-                 <a href="./resume.html">RESUME</a>
                  <a href="./contact.html">CONTACT</a>
              </div>
      </div>
@@ -50,7 +51,6 @@
                         <li><a href="./index.html">HOME</a></li>
                         <li><a href="./work.html">PROJECTS</a></li>
                         <li><a href="./blog.html">BLOGS</a></li>
-                        <!-- <li><a href="./resume.html">RESUME</a></li> -->
                         <li><a href="./gallery.html">GALLERY</a></li>
                         <li><a class="active" href="./contact.html">CONTACT</a></li>
                     </ul>
@@ -60,18 +60,18 @@
              <!--  -->
             <div class="col-lg-6">
                     <form action="https://formspree.io/f/xzbqjoav" method="POST">
-                      <input type="text" id="fname" name="firstname" placeholder="Name">
+                      <input type="name" id="name" name="Name" placeholder="Name" required>
                   
-                      <input type="text" id="lname" name="lastname" placeholder="Email Address">
+                      <input type="email" id="email" name="Email" placeholder="Email Address" required>
         
-                      <input type="text" id="lname" name="lastname" placeholder="Subject">
+                      <input type="subject" id="subject" name="Subject" placeholder="Subject" required>
                         
-                      <textarea id="subject" name="subject" placeholder="Message"></textarea>
+                      <textarea id="message" name="Message" placeholder="Message" required></textarea>
 
-
+                      <button class="btn3" type="submit"><span>Submit</span></button>
                     </form>
                     <div class="btn3-div">
-                        <button class="btn3"><span>Submit</span></button>
+                        
                     </div>
             </div>
         </div>
@@ -81,10 +81,8 @@
             <p class="brand-title"><img src="./assets/icons/1.png" alt="" class="logo-image"></p>
             <p>Copyright ©2023 All rights reserved | Simba Blessed Inc.</p>
             <div class="footer-icons">
-                <img src="./assets/icons/blue/Vector.png" alt="" class="icon1">
-                <img src="./assets/icons/blue/square-github 1.png" alt="" class="icon1">
-                <img src="./assets/icons/blue/instagram 1.png" alt="" class="icon1">
-                <img src="./assets/icons/blue/linkedin 1.png" alt="" class="icon1">
+                <i class="fa-light fa-envelope" style="color: white;"></i>
+                <i class="fa-brands fa-instagram"></i>
             </div>
         </div>
     </section>
