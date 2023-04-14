@@ -23,4 +23,14 @@
   .bilboard .social-icons li {
     transform: rotate(0);
   }
+  .work-section .div-gaps-medium {
+    padding: 8px 0;
+  }
+  .work-section .mynav {
+    display: none;
+  }
+  .work-section .genesis-content {
+    flex-direction: column;
+    text-align: center;
+  }
 }/*# sourceMappingURL=breakpoints.css.map */

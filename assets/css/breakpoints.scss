@@ -60,6 +60,18 @@
       }
   }
 
+.work-section{
+    .div-gaps-medium{
+        padding: 8px 0;
+    }
+    .mynav{
+        display: none;
+    }
 
+    .genesis-content{
+        flex-direction: column;
+        text-align: center;
+    }
+}
 
 }
