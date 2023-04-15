@@ -1,6 +1,49 @@
 //portrait tablets
 @media screen and ( min-width: 777px) and (max-width:1025px){
 
+    .bilboard{
+        overflow-y: hidden;
+        height: 100vh;
+
+        .mynav{
+            display: none;
+        }
+
+        .herotxt-grp{
+            text-align: center;
+        }
+
+        .social-icons{
+            transform: translateY();
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            
+            li{
+                transform: rotate(0);
+                display: flex;
+            }
+        }
+    }
+
+    .work-section{
+       
+        .mynav{
+            display: none;
+        }
+    }
+
+    .contact-form{
+        height: 80vh;
+        .mynav{
+            display: none;
+        }
+    }
+
+    .footer-section{
+        
+    }
 
   
   
