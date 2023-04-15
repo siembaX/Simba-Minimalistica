@@ -37,6 +37,11 @@ header .navbar {
   align-items: center;
   background-color: transparent;
 }
+header .navbar .logo-image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 80px;
+}
 header .navbar .brand-title {
   color: rgb(255, 255, 255);
   transform: translateY(35%);

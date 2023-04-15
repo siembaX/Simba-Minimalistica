@@ -12,6 +12,11 @@ header{
         justify-content: space-between;
         align-items: center;
         background-color: transparent;
+
+        .logo-image{
+            object-fit: contain;
+            width: 80px;
+        }
         
         .brand-title{
             color: rgb(255, 255, 255);
