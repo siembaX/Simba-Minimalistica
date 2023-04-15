@@ -33,4 +33,34 @@
     flex-direction: column;
     text-align: center;
   }
+  header .overlay .overlay-content a {
+    font-size: 40px;
+  }
+  header .overlay .overlay-content .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+  .about-me-skills .mynav {
+    display: none;
+  }
+  .about-me-skills .all-all p {
+    width: 150%;
+    text-align: center;
+    color: rgb(146, 146, 146);
+    transform: translateX(-15%);
+  }
+  .about-me-skills .all-all .items-alll {
+    padding-top: 140px;
+  }
+  .about-me-skills .all-all .items-alll .simz {
+    display: none;
+  }
+  .about-me-skills .all-all .items-alll h3 {
+    font-size: 23px;
+    width: 69%;
+    transform: translateX(-15%);
+    text-align: center;
+    font-weight: 800;
+  }
 }/*# sourceMappingURL=breakpoints.css.map */
