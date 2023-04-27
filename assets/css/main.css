@@ -769,7 +769,9 @@ header .overlay .closebtn {
   font-size: 35px;
   letter-spacing: 0px;
 }
-
+.work-section .card {
+  border-top: 2px solid red;
+}
 .bilboard-blog {
   background-color: #111;
   width: 100vw;
